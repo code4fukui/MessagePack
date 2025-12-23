@@ -8,15 +8,12 @@ https://msgpack.org/
 
 This library serves as a comprehensive reference implementation of MessagePack for JavaScript with a focus on accuracy, compatibility, interoperability, and performance.
 
-Additionally, this is also a universal JavaScript library. It is compatible not only with browsers, but with Node.js or other JavaScript engines that implement ES2015+ standards. As it is written in [TypeScript](https://www.typescriptlang.org/), this library bundles up-to-date type definition files (`d.ts`).
-
 *Note that this is the second edition of "MessagePack for JavaScript". The first edition, which was implemented in ES5 and never released to npmjs.com, is tagged as [`classic`](https://github.com/msgpack/msgpack-javascript/tree/classic).
 
 ## Synopsis
 
-```typescript
-import { deepStrictEqual } from "assert";
-import { encode, decode } from "@msgpack/msgpack";
+```js
+import { MessagePack } from "https://code4fukui.github.io/MessagePack/MessagePack.js";
 
 const object = {
   nil: null,
@@ -29,16 +26,17 @@ const object = {
   timestampExt: new Date(),
 };
 
-const encoded: Uint8Array = encode(object);
+const encoded = MessagePack.encode(object);
+console.log(encoded);
 
-deepStrictEqual(decode(encoded), object);
+const obj = MessagePack.decode(encoded);
+console.log(obj);
 ```
 
 ## Table of Contents
 
 - [Synopsis](#synopsis)
 - [Table of Contents](#table-of-contents)
-- [Install](#install)
 - [API](#api)
   - [`encode(data: unknown, options?: EncoderOptions): Uint8Array`](#encodedata-unknown-options-encoderoptions-uint8array)
     - [`EncoderOptions`](#encoderoptions)
@@ -73,14 +71,6 @@ deepStrictEqual(decode(encoded), object);
   - [Release Engineering](#release-engineering)
   - [Updating Dependencies](#updating-dependencies)
 - [License](#license)
-
-## Install
-
-This library is published to `npmjs.com` as [@msgpack/msgpack](https://www.npmjs.com/package/@msgpack/msgpack).
-
-```shell
-npm install @msgpack/msgpack
-```
 
 ## API
 
@@ -140,8 +130,6 @@ const encoded: Uint8Array;
 const object = decode(encoded);
 console.log(object);
 ```
-
-NodeJS `Buffer` is also acceptable because it is a subclass of `Uint8Array`.
 
 #### `DecoderOptions`
 
