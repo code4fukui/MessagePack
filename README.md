@@ -1,5 +1,7 @@
 # MessagePack for ECMA-262/JavaScript/TypeScript
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 This library is an implementation of **MessagePack** for TypeScript and JavaScript, providing a compact and efficient binary serialization format. Learn more about MessagePack at:
 
 https://msgpack.org/
