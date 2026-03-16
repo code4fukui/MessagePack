@@ -1,6 +1,6 @@
 # MessagePack for ECMA-262/JavaScript/TypeScript
 
-MessagePackは、JSONより小さいサイズのデータ転送フォーマットです。このライブラリは、TypeScriptとJavaScriptのためのMessagePackの包括的な実装で、正確性、互換性、パフォーマンスに焦点を当てています。
+MessagePackは、JSONよりも小さなバイナリ形式のデータ転送フォーマットです。このライブラリは、TypeScriptとJavaScriptのためのMessagePackの包括的な実装で、正確性、互換性、パフォーマンスに焦点を当てています。
 
 ## 機能
 

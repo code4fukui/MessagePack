@@ -37,38 +37,9 @@ console.log(obj);
 
 It encodes `data` into a single MessagePack-encoded object, and returns a byte array as `Uint8Array`.
 
-#### `EncoderOptions`
-
-| Name                | Type           | Default                       |
-| ------------------- | -------------- | ----------------------------- |
-| extensionCodec      | ExtensionCodec | `ExtensionCodec.defaultCodec` |
-| context             | user-defined   | -                             |
-| useBigInt64         | boolean        | false                         |
-| maxDepth            | number         | `100`                         |
-| initialBufferSize   | number         | `2048`                        |
-| sortKeys            | boolean        | false                         |
-| forceFloat32        | boolean        | false                         |
-| forceIntegerToFloat | boolean        | false                         |
-| ignoreUndefined     | boolean        | false                         |
-
 ### `decode(buffer: ArrayLike<number> | BufferSource, options?: DecoderOptions): unknown`
 
 It decodes `buffer` that includes a MessagePack-encoded object, and returns the decoded object typed `unknown`.
-
-#### `DecoderOptions`
-
-| Name            | Type                | Default                                        |
-| --------------- | ------------------- | ---------------------------------------------- |
-| extensionCodec  | ExtensionCodec      | `ExtensionCodec.defaultCodec`                  |
-| context         | user-defined        | -                                              |
-| useBigInt64     | boolean             | false                                          |
-| rawStrings      | boolean             | false                                          |
-| maxStrLength    | number              | `4_294_967_295` (UINT32_MAX)                   |
-| maxBinLength    | number              | `4_294_967_295` (UINT32_MAX)                   |
-| maxArrayLength  | number              | `4_294_967_295` (UINT32_MAX)                   |
-| maxMapLength    | number              | `4_294_967_295` (UINT32_MAX)                   |
-| maxExtLength    | number              | `4_294_967_295` (UINT32_MAX)                   |
-| mapKeyConverter | MapKeyConverterType | throw exception if key is not string or number |
 
 ### `decodeMulti(buffer: ArrayLike<number> | BufferSource, options?: DecoderOptions): Generator<unknown, void, unknown>`
 
@@ -140,4 +111,4 @@ This library is actively maintained, with the following practices:
 
 ## License
 
-This library is licensed under the ISC license.
+MIT License — see [LICENSE](LICENSE).
