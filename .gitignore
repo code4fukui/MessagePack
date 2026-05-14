@@ -21,3 +21,7 @@ flamegraph.html
 
 # jsfuzz
 corpus/
+
+# meta-ops cleanup
+.DS_Store
+Thumbs.db
